@@ -13,7 +13,7 @@
     --numbers:#F86086;
     --text:#8885A4;
     --text-normal:#fff;
-    --small-card-top:#2C2C44;
+    --line:#2C2C44;
     --small-card-bottom:#34364F;
 }
 
@@ -72,38 +72,43 @@ main section .timer{
 }
 
 main section .timer .small-card{
-    background: var(--small-card-bottom);
+    /* background: var(--small-card-bottom); */
     padding: 0.5em;
     margin:5px;
     display: block;
     text-align: center;
-    box-shadow: 2px 2px 5px #000;
+    /* box-shadow: 2px 2px 5px #000; */
     border-radius: 5px;
     position: relative;
     z-index: 1;
     overflow: hidden;
 }
 
-main section .timer .small-card:before{
-    content:'';
-    width: 100%;
-    height: 50%;
-    position:absolute;
-    top:0;
-    left:0;
-    right: 0;
-    z-index: -1;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #000;
-    background: var(--small-card-top);
-}
 
 main section .timer .small-card .number{
     font-size:1.9em;
     font-weight: bold;
+    background: var(--small-card-bottom);
     color: var(--numbers);
-    padding-bottom: 0.4em;
+    padding: 0.4em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #000;
+    margin-bottom: 10px;
+    position:relative;
 }
+
+main section .timer .small-card .number:after{
+    content:'';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    border-bottom: 1px solid #000;
+    opacity: 0.7;
+}
+
 
 main section .timer .small-card .text{
     color: var(--text);
@@ -130,13 +135,13 @@ main section .timer .small-card .text{
 
 @media screen and (min-width:676px ){
     main section{
-        font-size: 32px;
+        font-size: 30px;
     }
 }
 
 @media screen and (min-width:1000px ){
     main section{
-        font-size: 48px;
+        font-size: 40px;
     }
 }
 

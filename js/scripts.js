@@ -14,12 +14,12 @@ const timeLeft = {
 
 let totalSeconds;
 
+
 function init(){
-    totalSeconds = Math.floor((new Date('04.24.2021') - new Date()) / 1000);
+    totalSeconds = Math.floor((new Date('05.24.2021') - new Date()) / 1000);
     
     let interval = setInterval(()=>{
         if(totalSeconds < 0){
-            
             clearInterval(interval);
         }
         countTime();
